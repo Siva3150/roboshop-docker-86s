@@ -20,7 +20,9 @@ LABEL com.project="roboshop" \
     MONGO_URL="mongodb://mongodb:27017/users"
 COPY --from=build --chown=roboshop:roboshop /opt/server /opt/server
 USER roboshop 
-CMD ["node", "server.js"]
+CMD ["server.js"]
+ENTRYPOINT ["node"]
+#CMD ["node", "server.js"]
 
 
 # FROM node:20 
