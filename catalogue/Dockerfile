@@ -12,6 +12,9 @@ WORKDIR /opt/server
 RUN addgroup -S roboshop && adduser -S roboshop -G roboshop  
 RUN chown -R roboshop:roboshop /opt/server
 EXPOSE 8080  
+LABEL com.project="roboshop" \
+      component="catalogue" \
+      created_by="siva"
 ENV MONGO="true" \ 
     MONGO_URL="mongodb://mongodb:27017/catalogue"
 CMD ["node", "server.js"]

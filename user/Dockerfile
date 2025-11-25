@@ -11,7 +11,10 @@ WORKDIR /opt/server
 # Create a group and user
 RUN addgroup -S roboshop && adduser -S roboshop -G roboshop  
 RUN chown -R roboshop:roboshop /opt/server
-EXPOSE 8080 
+EXPOSE 8080
+LABEL com.project="roboshop" \
+      component="catalogue" \
+      created_by="siva" 
  ENV MONGO="true" \
     REDIS_URL="redis://redis:6379" \
     MONGO_URL="mongodb://mongodb:27017/users"
