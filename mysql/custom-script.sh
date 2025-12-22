@@ -10,5 +10,5 @@ fi
 
 export MYSQL_ROOT_PASSWORD=$PASSWORD
 rm -rf /tmp/mysql-root-password.txt
-exec /usr/local/bin/docker-entrypoint.sh mysqld
-#exec /entrypoint.sh mysqld
+exec /entrypoint.sh mysqld
+#exec /usr/local/bin/docker-entrypoint.sh mysqld
